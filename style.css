@@ -278,7 +278,7 @@ nav button{
 }
 
 .step{
-  opacity:0.3;
+  opacity:0.9;
   transition:0.4s;
   text-align:center;
 }
@@ -290,10 +290,29 @@ nav button{
 
 .line{
   width:80px;
-  height:4px;
+  height:8px;
   background:#ddd;
   margin:0 10px;
+  position:relative;
+  overflow:hidden;
+  flex-shrink: 0;
 }
+
+.line::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:0%;
+  height:100%;
+  background:#28a745;
+  transition:width 1s ease;
+}
+
+.line.active::after{
+  width:100%;
+}
+
 
 /* CARRINHO */
 
