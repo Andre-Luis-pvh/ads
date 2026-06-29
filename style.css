@@ -394,6 +394,15 @@ nav button{
   background:#321b10;
 }
 
+.footer-lgpd {
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #070707;
+}
+
 /* TOAST */
 
 #toast{

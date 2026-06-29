@@ -12,7 +12,6 @@ function selecionarLoja(loja){
   document.getElementById("appPage").style.display = "block";
 }
 
-/* LOGIN */
 function login() {
   const user = document.getElementById("user").value;
   const pass = document.getElementById("pass").value;
@@ -26,6 +25,11 @@ function login() {
 
   if (!lgpd) {
     msg.innerHTML = "Você precisa aceitar a LGPD.";
+    return;
+  }
+
+  if (user !== "admin" || pass !== "1234") {
+    msg.innerHTML = "Usuário ou senha incorretos.";
     return;
   }
 
